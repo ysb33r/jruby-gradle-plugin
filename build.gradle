@@ -136,6 +136,10 @@ artifacts {
     archives sourcesJar
 }
 
+groovydoc {
+    docTitle = "${archivesBaseName} ${version}"
+}
+
 task installGroovyDoc (type : Copy) {
     from ({new File(buildDir,'docs/groovydoc')}) {
         include '**'
