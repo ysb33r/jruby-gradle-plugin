@@ -10,7 +10,7 @@
 
 * `jruby.gemInstallDir` is no longer of type `String`, but now of type `Object` and is of private scope. Access via
    assignment (as per previous versions) or use getter/setter methods.
-* Default for `gemInstallDir` is now `"${buildDir}/gems"` instead of `"${buildDir}/vendor/gems"`
+* Default for `gemInstallDir` is now `"${buildDir}/rubygems"` instead of `"${buildDir}/vendor"`
 
 ## 0.1.11
 
