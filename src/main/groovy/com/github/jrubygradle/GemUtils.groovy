@@ -13,7 +13,23 @@ import org.gradle.api.file.FileCollection
  */
 class GemUtils {
 
-    enum OverwriteAction { FAIL, SKIP, OVERWRITE }
+    /** Actions to be taken when a GEM has already been installed.
+     *
+     */
+    enum OverwriteAction {
+
+        /** Fail if GEM has lready been installed.
+         */
+        FAIL,
+
+        /** Skip installation if the GEM already has been installed.
+         */
+        SKIP,
+
+        /** Re-install regardless.
+         */
+        OVERWRITE
+    }
 
     /** Given a FileCollection return a filtered FileCollection only containing GEMs
      *
