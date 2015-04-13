@@ -61,7 +61,7 @@ class JRubyPluginExtension {
 
     JRubyPluginExtension(Project p) {
         project = p
-        this.gemInstallDir = {new File(p.buildDir,'rubygems')}
+        this.gemInstallDir = { new File(p.buildDir, 'gems').absolutePath }
     }
 
     /** Change the version of jruby for jrubyexec and JRubyExec

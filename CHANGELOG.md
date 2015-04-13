@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.14
+
+* [#101](https://github.com/jruby-gradle/jruby-gradle-plugin/issues/101) -
+  ZipException with 0.1.12 executing jrubyStorm task. Defaulting the gem
+  installation directory to `${buildDir}/gems`
+
+## 0.1.13
+
+* Added support for using closures in the `scriptArgs` for `JRubyExec` tasks
+  which are evaluated at execution time.
+
+
 ## 0.1.12
 
 ### Improvements
