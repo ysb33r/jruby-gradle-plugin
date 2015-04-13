@@ -7,7 +7,7 @@ import spock.lang.Specification
 /**
  * @author Schalk W. Cronjé
  */
-class JRubyGenerateGradleRbIntegrationSpec extends Specification {
+class JRubyGenerateGradleRbSpec extends Specification {
 
     static final File CACHEDIR = new File( System.getProperty('TEST_CACHEDIR') ?: 'build/tmp/integrationTest/cache')
     static final File FLATREPO = new File( System.getProperty('TEST_FLATREPO') ?: 'build/tmp/integrationTest/flatRepo')
