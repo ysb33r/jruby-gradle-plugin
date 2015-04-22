@@ -183,10 +183,14 @@ class GemUtils {
         project.copySpec {
             from(dir) {
                 include '**'
+                // TODO have some standard which is bin/*, gems/**
+                // specifications/*
                 if(!fullGem) {
                     exclude 'cache/**'
                     exclude 'gems/*/test/**'
                     exclude 'gems/*/tests/**'
+                    exclude 'gems/*/spec/**'
+                    exclude 'gems/*/specs/**'
                     exclude 'build_info'
                 }
             }
@@ -194,6 +198,14 @@ class GemUtils {
             if(properties.containsKey('subfolder')) {
                 into properties['subfolder']
             }
+        }
+    }
+
+    static CopySpec jarCopySpec(Project project,Object dir) {
+	project.copySpec {
+	    from(dir) {
+                include '**'
+	    }
         }
     }
 }
