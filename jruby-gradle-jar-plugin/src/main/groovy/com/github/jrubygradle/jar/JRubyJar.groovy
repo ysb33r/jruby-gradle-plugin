@@ -213,9 +213,7 @@ class JRubyJar extends Jar {
                 exclude 'META-INF/maven/**/pom.xml'
             }
 
-            manifest = project.manifest {
-                attributes 'Main-Class': mainClass
-            }
+            manifest.attributes 'Main-Class': mainClass
         }
 
         if (scriptName != Type.RUNNABLE && scriptName != Type.LIBRARY) {
@@ -276,7 +274,7 @@ class JRubyJar extends Jar {
     void addEmbeddedDependencies(Configuration config) {
         /* To ensure that we can load our jars properly, we should always have
          * jar-dependencies in our resolution graph */
-        project.dependencies.add(config.name, 'rubygems:jar-dependencies:0.1.15')
+        project.dependencies.add(config.name, 'rubygems:jar-dependencies:[0.1.15,)')
     }
 
     /** Update the staging directory and tasks responsible for setting it up */
