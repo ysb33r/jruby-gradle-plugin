@@ -5,5 +5,5 @@
     project(":${fName}").projectDir = file("${mod}-plugin")
 }
 
-include 'docs'
+//include 'docs'
 
