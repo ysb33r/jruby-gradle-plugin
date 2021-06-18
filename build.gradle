@@ -91,6 +91,9 @@ subprojects {
         pluginBundle {
             website = 'https://github.com/jruby-gradle/jruby-gradle-plugin' // 'http://jruby-gradle.org/'
             vcsUrl = 'https://github.com/jruby-gradle/jruby-gradle-plugin.git'
+            mavenCoordinates {
+                groupId = project.group
+            }
         }
 
         tasks.withType(Test) {
